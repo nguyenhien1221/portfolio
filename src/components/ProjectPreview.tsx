@@ -35,14 +35,14 @@ const DashboardPreview = () => {
       </div>
     </div>
   );
-}
+};
 
 const MobilePreview = () => {
   return (
     <div className="relative h-full min-h-[200px] overflow-hidden bg-gradient-to-br from-panel-header to-ink lg:min-h-0">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,rgba(0,245,255,0.15),transparent_60%)]" />
       <div className="absolute left-1/2 top-1/2 h-[85%] w-[45%] max-w-[140px] -translate-x-1/2 -translate-y-1/2 rounded-2xl border-2 border-white/15 bg-ink/80 p-2 shadow-[0_0_40px_rgba(0,245,255,0.12)]">
-        <div className="mb-2 h-1 w-8 rounded-full bg-white/20 mx-auto" />
+        <div className="mx-auto mb-2 h-1 w-8 rounded-full bg-white/20" />
         <div className="space-y-2 rounded-lg bg-panel p-2">
           <div className="h-8 rounded bg-accent/20" />
           <div className="grid grid-cols-2 gap-1.5">
@@ -54,7 +54,7 @@ const MobilePreview = () => {
       </div>
     </div>
   );
-}
+};
 
 const StorefrontPreview = () => {
   return (
@@ -75,7 +75,7 @@ const StorefrontPreview = () => {
       </div>
     </div>
   );
-}
+};
 
 const WavePreview = () => {
   return (
@@ -104,7 +104,7 @@ const WavePreview = () => {
       </svg>
     </div>
   );
-}
+};
 
 const previews: Record<PreviewVariant, () => ReactElement> = {
   dashboard: DashboardPreview,
@@ -116,6 +116,6 @@ const previews: Record<PreviewVariant, () => ReactElement> = {
 const ProjectPreview = ({ variant }: ProjectPreviewProps) => {
   const Preview = previews[variant];
   return <Preview />;
-}
+};
 
 export default ProjectPreview;
