@@ -1,25 +1,19 @@
 import SocialIcon from '../SocialIcon';
+import useActiveSection from '../../context/ActiveSectionContext';
 import { navLinks, siteConfig, socialLinks } from '../../data/site';
-import useActiveSection from '../../hooks/useActiveSection';
 
 const Sidebar = () => {
-  const activeSection = useActiveSection(navLinks.map(({ id }) => id));
+  const { activeSection, scrollToSection } = useActiveSection();
   const [firstName, ...restName] = siteConfig.name.split(' ');
 
-  const handleNavClick = (href: string) => {
-    const id = href.replace('#', '');
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <aside className="py-12 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-72 lg:shrink-0 lg:flex-col lg:justify-between lg:py-24">
+    <aside className="pb-8 pt-4 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-72 lg:shrink-0 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <a
           href="#about"
           onClick={(event) => {
             event.preventDefault();
-            handleNavClick('#about');
+            scrollToSection('about');
           }}
           className="inline-block"
         >
@@ -48,7 +42,7 @@ const Sidebar = () => {
                     href={href}
                     onClick={(event) => {
                       event.preventDefault();
-                      handleNavClick(href);
+                      scrollToSection(id);
                     }}
                     className={[
                       'group flex items-center gap-4 text-xs font-bold tracking-[0.2em] transition-colors',

@@ -9,35 +9,27 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
-    period: '2022 — Present',
-    title: 'Senior Frontend Engineer',
-    company: 'CloudNexus',
-    description:
-      'Leading frontend architecture for a multi-tenant SaaS platform. Built design systems, optimized Core Web Vitals, and integrated Web3 wallet flows across React and Next.js applications.',
-    tags: ['Next.js', 'NestJS', 'Web3', 'Tailwind'],
-  },
-  {
-    period: '2020 — 2022',
-    title: 'UI/UX Developer',
-    company: 'PixelForge Studio',
-    description:
-      'Translated Figma designs into responsive, accessible interfaces. Collaborated with designers to establish component libraries and motion guidelines for client deliverables.',
-    tags: ['React', 'Figma', 'Storybook', 'GSAP'],
-  },
-  {
-    period: '2018 — 2020',
+    period: 'Oct 2023 — Jun 2026',
     title: 'Frontend Developer',
-    company: 'DevLaunch',
+    company: 'Icetea Software',
     description:
-      'Shipped production features for e-commerce and dashboard products. Gained foundational experience in REST APIs, state management, and agile delivery workflows.',
-    tags: ['JavaScript', 'Redux', 'REST', 'Jest'],
+      'Developed and maintained frontend features for Web3 applications. Integrated blockchain wallets and smart contract interactions, worked closely with the backend team to consume APIs and handle edge cases, and improved UI performance and user experience.',
+    tags: ['Web3', 'React', 'TypeScript', 'Wagmi'],
   },
   {
-    period: '2014 — 2018',
-    title: 'B.Sc. Computer Science',
-    company: 'Tech University',
+    period: 'Oct 2022 — Sep 2023',
+    title: 'Frontend Web Developer',
+    company: 'Monstarlab Viet Nam',
     description:
-      'Focused on software engineering, algorithms, and human-computer interaction. Graduated with honors and completed a capstone project on real-time web applications.',
-    tags: [],
+      'Built and maintained UI features using React and Ant Design. Integrated REST APIs and handled data fetching with React Query, fixed UI and logic bugs to improve application stability, and collaborated with team members through Git workflow.',
+    tags: ['React', 'Ant Design', 'React Query', 'HTML5'],
+  },
+  {
+    period: 'May 2022 — Jul 2022',
+    title: 'Frontend Developer Intern',
+    company: 'Appota',
+    description:
+      'Supported UI development for e-commerce features. Worked with Next.js, TypeScript, and Ant Design, fixed UI issues, and assisted in feature implementation.',
+    tags: ['Next.js', 'TypeScript', 'Ant Design', 'HTML5', 'CSS'],
   },
 ];

@@ -10,10 +10,10 @@ const ExperienceSection = () => {
   const { panelRef, handleTabClick } = useExperienceAnimations(activeIndex, setActiveIndex);
 
   return (
-    <section id="experience" className="scroll-mt-24 pb-16 lg:pb-32">
+    <section id="experience" className="scroll-mt-24 pb-16 lg:pb-32 min-h-[540px]">
       <SectionLabel index="02" title="Experience" />
 
-      <div className="hidden lg:flex lg:gap-8">
+      <div className="hidden lg:flex lg:gap-8 min-h-[300px]">
         <div
           role="tablist"
           aria-label="Work experience"
@@ -53,10 +53,7 @@ const ExperienceSection = () => {
                   ].join(' ')}
                 >
                   {entry.title}
-                  <span className="hidden sm:inline">
-                    {' '}
-                    · {entry.company}
-                  </span>
+                  <span className="hidden sm:inline"> · {entry.company}</span>
                 </span>
               </button>
             );
@@ -74,8 +71,7 @@ const ExperienceSection = () => {
             className="experience-panel rounded-lg border border-white/10 bg-panel/40 p-6 lg:p-8"
           >
             <h3 className="experience-panel-title text-lg font-medium text-white">
-              {activeEntry.title}{' '}
-              <span className="text-muted">· {activeEntry.company}</span>
+              {activeEntry.title} <span className="text-muted">· {activeEntry.company}</span>
             </h3>
             <p className="experience-panel-desc mt-4 text-sm leading-relaxed text-muted sm:text-base">
               {activeEntry.description}
@@ -116,9 +112,7 @@ const ExperienceSection = () => {
                 ))}
               </ul>
             )}
-            {index < experience.length - 1 && (
-              <hr className="mt-10 border-white/10" />
-            )}
+            {index < experience.length - 1 && <hr className="mt-10 border-white/10" />}
           </article>
         ))}
       </div>

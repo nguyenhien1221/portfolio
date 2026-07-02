@@ -2,7 +2,8 @@ export const siteConfig = {
   name: 'Hien Nguyen',
   title: 'Frontend Engineer',
   tagline: 'I build accessible, pixel-perfect experiences for the web.',
-  email: 'hello@devcore.dev',
+  email: 'nguyenhien2942000@gmail.com',
+  phone: '+84 333854312',
   resumeUrl: '/resume.pdf',
 };
 

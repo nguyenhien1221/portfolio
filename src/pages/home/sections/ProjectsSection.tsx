@@ -7,11 +7,7 @@ const ProjectsSection = () => {
   const { rootRef, handleProjectEnter, handleProjectLeave } = useProjectAnimations();
 
   return (
-    <section
-      id="projects"
-      ref={rootRef}
-      className="scroll-mt-24 pb-16 lg:pb-32"
-    >
+    <section id="projects" ref={rootRef} className="scroll-mt-24 pb-16 lg:pb-32">
       <SectionLabel index="03" title="Projects" />
 
       <ul className="group/list space-y-12">
@@ -39,15 +35,10 @@ const ProjectsSection = () => {
                     ↗
                   </span>
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {project.description}
-                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{project.description}</p>
                 <ul className="mt-3 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="project-tag font-mono text-xs text-muted"
-                    >
+                    <li key={tag} className="project-tag font-mono text-xs text-muted">
                       {tag}
                     </li>
                   ))}
@@ -57,14 +48,6 @@ const ProjectsSection = () => {
           </li>
         ))}
       </ul>
-
-      <a
-        href="#"
-        className="mt-12 inline-flex items-center gap-2 font-mono text-xs tracking-[0.15em] text-accent transition-colors hover:text-white"
-      >
-        View Full Project Archive
-        <span aria-hidden>→</span>
-      </a>
     </section>
   );
 };
